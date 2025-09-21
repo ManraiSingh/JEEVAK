@@ -1,0 +1,431 @@
+:root {
+  --bg: #0b1320;
+  --panel: #0f1b2a;
+  --accent: #6d9cff;
+  --accent-2: #7b5cff;
+  --muted: #96a0b6;
+  --text: #e6eef8;
+  --subtext: #97a0b5;
+  --green: #39b785;
+  --blue: #4aa3ff;
+  --orange: #f08b3a;
+  --purple: #a07bff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  padding: 28px 36px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.upload-btn {
+  background: #1b2740;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  border: none;
+}
+
+.meta {
+  color: var(--subtext);
+  font-size: 14px;
+}
+
+/* GRID */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* IMAGE PANEL */
+.card {
+  background: #0f1b2a;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.image-panel {
+  height: 420px;
+  display: flex;
+}
+
+.image-panel-inner {
+  width: 100%;
+  height: 100%;
+  background: #0b1520;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.microscope-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.placeholder-rect {
+  width: 85%;
+  height: 78%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.choose-btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: var(--subtext);
+}
+
+.hint {
+  color: var(--subtext);
+  font-size: 13px;
+}
+
+/* LOWER ROW */
+.lower-row {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 18px;
+}
+
+/* CHAT + REPORT */
+.chat-card {
+  border: 2px solid var(--accent-2);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.chatbot-card {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+}
+
+.report-card-inner {
+  background: #0c1624;
+  padding: 20px;
+  border-radius: 12px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.report-card-inner h2 {
+  color: var(--accent-2);
+  margin: 0 0 6px 0;
+}
+
+.report-text {
+  color: var(--subtext);
+  margin: 8px 0 16px 0;
+}
+
+.pdf-btn {
+  background: #7daeff;
+  border: none;
+  color: #072033;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+/* CHATBOT */
+.chat-heading {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: var(--accent-2);
+}
+
+.chat-history {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.msg {
+  max-width: 78%;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.msg.bot {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.msg.user {
+  align-self: flex-end;
+  background: #2a3145;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text);
+}
+
+.send-btn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #333b56;
+  border: none;
+  color: var(--text);
+}
+
+/* SUMMARY PANEL */
+.summary-panel {
+  height: 720px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-panel h3 {
+  margin: 0 0 14px 0;
+}
+
+.counts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.count-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.count-num {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.count-num.green {
+  color: var(--green);
+}
+
+.count-num.blue {
+  color: var(--blue);
+}
+
+.count-num.orange {
+  color: var(--orange);
+}
+
+.count-num.purple {
+  color: var(--purple);
+}
+
+.count-label {
+  font-size: 16px;
+}
+
+.graph label {
+  color: var(--subtext);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.graph-bottom {
+  margin-top: 12px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lower-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* DETECTED LIST */
+.detected-list {
+  margin-top: 20px;
+  padding: 10px;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+.detected-list h4 {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.detected-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detected-list li {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.share-btn {
+  background: rgba(255, 255, 255, 0.03);
+  color: #e6eef8;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* SPECIES DOT */
+.species-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06) inset;
+}
+
+.species-dot.phytoplankton {
+  background: #2ecc71;
+}
+
+.species-dot.zooplankton {
+  background: #3498db;
+}
+
+.species-dot.bacteria {
+  background: #f39c12;
+}
+
+.species-dot.fungus {
+  background: #9b59b6;
+}
+
+.species-dot.other {
+  background: #7f8c8d;
+}
+
+.species-row .count-label {
+  font-weight: 600;
+  color: #e6eef8;
+}
+
+.species-count {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.summary-panel .counts {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* GALLERY */
+.gallery-grid img {
+  border-radius: 6px;
+}
+
+.gallery-thumb.selected {
+  outline: 2px solid #2a9df4;
+}
+
+.tiny-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-page .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* FINAL BRAND STYLE (kept) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  height: 60px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 24px;
+}
