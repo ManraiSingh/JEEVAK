@@ -31,10 +31,13 @@ It allows users to upload microscope images of water samples, automatically dete
   - Styled with a custom CSS theme.  
   - Responsive design for desktop and mobile.
 
+![WhatsApp Image 2025-09-25 at 14 08 03](https://github.com/user-attachments/assets/126ffcb1-d329-476a-a5c0-e263a046bf7f)
+
+  
+
 ---
 
 
----
 
 ##  Installation & Setup
 
